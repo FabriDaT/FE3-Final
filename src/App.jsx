@@ -1,27 +1,23 @@
-
 import { Route, Routes } from "react-router-dom";
-import Footer from "./Components/Footer";
-import Navbar from "./Components/Navbar";
-import Favs from "./Routes/Favs"
-import Home from "./Routes/Home"
-import Contact from "./Routes/Contact"
-
+import Favs from "./Routes/Favs";
+import Home from "./Routes/Home";
+import Contact from "./Routes/Contact";
 
 function App() {
   return (
-      <div className="App">
-
-          <Navbar/>
-       
-
-          <Routes  path='/' element={<Navbar/>}>
-            <Route path={Routes.home} element={<Home />}> Home </Route>
-            <Route path={Routes.contacto}  element={<Contact />}>Contacto</Route>
-            <Route path={Routes.favoritos}  element={<Favs/>}>Favoritos</Route>
-           
-          </Routes>  
-           <Footer/>
-      </div>
+    <div className="App">
+      <Routes>
+        <Route path='Routes/Home' element={<Home />}>
+          
+        </Route>
+        <Route path='Routes/Contact' element={<Contact />}>
+          
+        </Route>
+        <Route path='Routes/Favs' element={<Favs />}>
+          
+        </Route>
+      </Routes>
+    </div>
   );
 }
 

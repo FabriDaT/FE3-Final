@@ -6,7 +6,7 @@ import React from 'react'
 
 const Context = () => {
   return (
-    <div>Context re lokito</div>
+    <div>Context re lokitooooo jajaj</div>
   )
 }
 
