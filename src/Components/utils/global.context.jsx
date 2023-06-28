@@ -1,15 +1,23 @@
-import { createContext } from "react";
+import { createContext, useState } from "react";
 
-export const initialState = {theme: "", data: []}
 
-export const ContextGlobal = createContext(undefined);
+export const ContextGlobal = createContext();
 
 export const ContextProvider = ({ children }) => {
+  const [theme, setTheme] = useState('light');
+
   //Aqui deberan implementar la logica propia del Context, utilizando el hook useMemo
 
-  return (
-    <ContextGlobal.Provider value={{}}>
-      {children}
-    </ContextGlobal.Provider>
-  );
+  const toggleTheme = () => {
+    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+  };
+
+  const contextValue = {
+    value: theme,
+   changeValue: toggleTheme
+  };
+
+  return <ContextGlobal.Provider value={contextValue}>
+    {children}
+    </ContextGlobal.Provider>;
 };
