@@ -25,8 +25,8 @@ const Home = () => {
       <div className="card-grid">
         {/* Aqui deberias renderizar las cards */}
         {users.map((user) => (
-          <Link to={`/dentist/${user.id}`}>
-            <Card name={user.name} username={user.username} key={user.id}>
+          <Link key={user.id} to={`${user.id}`}>
+            <Card name={user.name} username={user.username}>
               
             </Card>
           </Link>

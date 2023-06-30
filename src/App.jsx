@@ -16,10 +16,10 @@ function App() {
       <Navbar />
 
       <Routes   >
-        <Route path={Routes.home} element={<Home />} />
+        <Route path='Routes/home' element={<Home />} />    
            
         
-       <Route path={Routes.dentist/:id} element={<Detail/>} />
+        <Route path='Routes/dentist/:id' element={<Detail/>} />
 
         <Route path="Routes/Contact" element={<Contact />} />
 
