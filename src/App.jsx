@@ -15,14 +15,18 @@ function App() {
     <div className={theme.value}>
       <Navbar />
 
-      <Routes>
-        <Route path="/Routes/Home" element={<Home />} />
+      <Routes   >
+        <Route path="Routes/Home" element={<Home />} />
+           
+        
+       <Route path="Routes/Home/dentist/:id" element={<Detail/>} />
 
         <Route path="Routes/Contact" element={<Contact />} />
 
         <Route path="Routes/Favs" element={<Favs />} />
 
-        <Route path="Routes/Detail/:id" element={<Detail/>} />
+       
+        <Route path="*" element={<div> error page not found </div>} />
         
       </Routes>
 
